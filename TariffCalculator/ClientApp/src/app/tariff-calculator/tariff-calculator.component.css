@@ -1,0 +1,31 @@
+.btnTrf {
+    margin-left: 30px;
+}
+
+.tarrifContainer {
+  width: 500px;
+  margin-top: 50px;
+}
+
+.tarrifRow {
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.type {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+td {
+  padding: 15px;
+}
+
+td:first-child {
+  border-right: 1px solid black;
+}

@@ -1,0 +1,26 @@
+<h1>Compare Tariff</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      Enter Consumption: <input type="text" [(ngModel)]="consumption" /> kWh/year
+      <button (click)="getTariffs()" class="btnTrf">Get Tariffs</button>
+    </div>
+  </div>
+
+  <div *ngIf="tariffs" class="tarrifContainer">
+    <div class="row tarrifRow" *ngFor="let tariff of tariffs; index as i">
+      <table>
+        <tr>
+          <td class="col-sm-1">{{ i+1 }}</td>
+          <td class="col-sm-6 type">{{ tariff.tariffName }}</td>
+          <td class="col-sm-5">
+            <div class="price">{{ tariff.annualCost | currency: 'EUR' }}</div>
+            <div><button>To Tariff ></button></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
